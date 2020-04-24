@@ -1,7 +1,7 @@
 
 import discord
 
-TOKEN = 'NTU5MjA4MDE4NTcxNDI3ODQz.XqM_5A.OMcC9XrYq1cPZhKDVuEg3YxxNgQ'
+TOKEN = 'nunya'
 
 client = discord.Client()
 channel = client.get_channel(id)
