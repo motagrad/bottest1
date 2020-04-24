@@ -4,7 +4,6 @@ import discord
 TOKEN = 'nunya'
 
 client = discord.Client()
-channel = client.get_channel(id)
 @client.event
 async def on_message(message):
     if message.author == client.user:
@@ -12,7 +11,9 @@ async def on_message(message):
 
     if message.content.startswith('!hello'):
         msg = 'Hello {0.author.mention}'.format(message)
-        await  channel.send(message.channel, msg)
+        await client.wait_until_ready()
+        channel = client.get_channel(339295367658995712)
+        await  channel.send(msg)
 
 @client.event
 async def on_ready():
